@@ -1,0 +1,143 @@
+/* pages/movies/moviesInfo/moviesInfo.wxss */
+@import "../stars-template/stars-template.wxss";
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+.header-img {
+  width: 100%;
+  height: 320rpx;
+  position: absolute;
+  top: 0; 
+  filter:blur(6px); 
+}
+.produceInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 40rpx auto auto 30rpx;
+  letter-spacing: 1px;
+  position: relative;
+}
+.produceInfo .title{
+  color: #fff;
+  font-size: 18px;
+  width: 600rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.produceInfo .info {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 32rpx;
+}
+.comments{
+  display: flex;
+  flex-direction: row;
+  color: #eee;
+  font-size: 12px;
+  margin-top: 66rpx;
+}
+.comments .nums {
+  color: red;
+  margin-right: 20rpx;
+}
+.comments .likes {
+  margin-right: 23rpx;
+}
+.poster {
+  width: 176rpx;
+  height: 250rpx;
+  position: absolute;
+  bottom: -160rpx;
+  right: -53rpx;
+}
+.movieInfo{
+  width: 100%;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  margin:50rpx auto auto 32rpx;
+  font-size: 14px;
+}
+.movieInfo .movie-title {
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+.movieInfo .caption {
+   margin-right: 44rpx;
+   color: #aaa;
+}
+.movieInfo .first {
+  margin-top: 16rpx;
+  color: #aaa;
+}
+.movieInfo .content {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+.content .con {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.con .first {
+  margin-right: 44rpx;
+}
+.plotInfo{
+  display:flex;
+  flex-direction: column;
+  border:1px solid #eee;
+  border-left: none;
+  border-right: none;
+  padding: 40rpx 30rpx;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.plotInfo .header {
+  color: #ccc;
+  margin-bottom: 30rpx;
+}
+.plotInfo .word {
+  line-height: 24px;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  color: #aaa;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-indent: 2em;
+}
+.actorInfo {
+  margin: 30rpx;
+}
+.actorInfo .imgList{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+}
+.imgList image {
+  width: 160rpx;
+  height: 200rpx;
+}
+.actorInfo .actor-title {
+  font-size: 14px;
+  color: #aaa;
+}
+.actorInfo .actorItem {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 12px;
+  text-align: center;
+  width: 160rpx;
+  margin-right: 20px;
+  color: #aaa;
+}
+.actorItem text {
+  margin-top: 10rpx;
+}

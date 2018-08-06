@@ -1,0 +1,17 @@
+<template  name="postTmp">
+   <view class="list-container">
+      <view class="authorInfo">
+        <image class="avatar" src="{{author_img}}"></image>
+        <text class="date">{{date}}</text>
+      </view>
+      <text class="title">{{title}}</text> 
+      <image class="post" src="{{post_img}}"></image>
+      <text class="content">{{content}}</text>
+      <view class="post-like">
+        <image class="like-icon" src="/images/icon/chat.png"></image>
+        <text class="like-text" style="margin-right: 20px">{{view_nums}}</text>
+        <image class="like-icon" src="/images/icon/view.png"></image>
+        <text class="like-text">{{collect_nums}}</text>
+      </view>
+    </view>
+</template>

@@ -1,0 +1,13 @@
+/* pages/movies/moviesDetail/moviesDetail.wxss */
+@import "../movie-template/movie-template.wxss";
+.detail-container {
+  margin: 30rpx 24rpx;
+}
+.item {
+   float: left;
+   margin-bottom: 20rpx;
+   margin-right: 51rpx;
+}
+.item:nth-child(3n+0){
+  margin-right: 0px;
+}

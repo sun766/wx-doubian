@@ -1,0 +1,21 @@
+
+<import src="/pages/movies/movies-template/movies-template.wxml"/>
+<import src="/pages/movies/movie-template/movie-template.wxml"/>
+<view class="search">
+    <icon class="search-img" type="search" size="13" color="#405f80"></icon>
+    <input placeholder='你的名字' placeholder-class='placeholder'  bindfocus="onFocus" bindchange="onChange"></input>
+    <image class="close" src="/images/icon/xx.png" bindtap="onTap" wx:if="{{resultStatus}}"></image>
+</view>
+<view class="Vcontainer" wx:if="{{listStatus}}">
+   <template is="moviesTmp" data="{{...movies.in_theaters}}"/>
+   <template is="moviesTmp" data="{{...movies.coming_soon}}"/>
+   <template is="moviesTmp" data="{{...movies.top250}}"/>
+</view>
+<view class="result" wx:if="{{resultStatus}}">
+   <block wx:for="{{movies.searchResult.subjects}}" wx:for-item="item" wx:key="index">
+      <view class="itemStyle">
+         <template is="movieTmp" data="{{...item}}"/>
+      </view>
+   </block>
+   <text>{{tip}}</text>
+</view>

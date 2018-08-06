@@ -1,0 +1,42 @@
+<import src="/pages/movies/stars-template/stars-template.wxml" />
+<view class="info-container">
+  <image src="{{movie.movieImg}}" class="header-img" mode="aspectFill" catchtap="onPreviewTap" data-src="{{movie.movieImg}}"></image>
+  <view class="produceInfo" catchtap="onPreviewTap" data-src="{{movie.movieImg}}">
+    <text class="title">{{movie.title}}</text>
+    <text class="info">{{movie.countries}} · {{movie.year}}</text>
+    <view class="comments">
+      <text class="likes"><text class="nums">{{movie.likes}}</text>喜欢</text>
+      <text><text class="nums">{{movie.comments}}</text>条评论</text>
+    </view>
+    <image src="{{movie.movieImg}}" class="poster"></image>
+  </view>
+  <view class="movieInfo">
+    <text class="movie-title">{{movie.title}}</text>
+    <view class="content">
+      <view class="con">
+         <text class="first">评分</text>
+         <view class="score">
+            <template is="starTmp" data="{{...movie.rating}}"/>
+         </view>
+      </view>
+      <text class="first"><text class="caption">导演</text>{{movie.directors}}</text>
+      <text class="first"><text class="caption">影人</text>{{movie.casts}}</text>
+      <text class="first"><text class="caption">类型</text>{{movie.genres}}</text>
+    </view>
+  </view>
+  <view class="plotInfo">
+     <text class="header">剧情简介</text>
+     <text class="word">{{movie.summary}}</text>
+  </view>
+  <view class="actorInfo">
+      <text class="actor-title">影人</text>
+      <scroll-view class="imgList" scroll-x>
+        <block wx:for="{{movie.actorInfo}}" wx:for-item="item" wx:key="index">
+          <view class="actorItem">
+              <image src="{{item.img}}"></image>
+              <text>{{item.name}}</text> 
+          </view>
+        </block>
+      </scroll-view> 
+  </view>
+</view>

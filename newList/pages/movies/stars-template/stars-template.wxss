@@ -1,0 +1,21 @@
+.star-container {
+  display:flex;
+  flex-direction: row;
+}
+.starList {
+  display: flex;
+  flex-direction: row;
+  height: 17rpx;
+  margin-right: 24rpx;
+    margin-top: 6rpx;
+}
+.starList image {
+  padding-left: 3rpx;
+  width: 17rpx;
+  height: 17rpx;
+}
+.score {
+  font-size: 24rpx;
+  color: #ef3463;
+
+}

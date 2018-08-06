@@ -1,0 +1,8 @@
+<import src="/pages/movies/stars-template/stars-template.wxml"/>
+<template name="movieTmp">
+    <view class="movie-container" catchtap="onDetailTap" data-id="{{id}}">
+        <image class="postImg" src="{{images.large}}"></image>
+        <text class="name">{{title}}</text>
+        <template is="starTmp" data="{{...rating}}"/>
+    </view>
+</template>
